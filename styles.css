@@ -1,0 +1,59 @@
+:root {
+	color-scheme: dark;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #000;
+	color: #ddd;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+button { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+button, a { color: inherit; }
+a { text-decoration: none; }
+a:hover, a:focus-visible { color: #fff; }
+button:focus-visible, a:focus-visible { outline: 1px solid #d6e4dd; outline-offset: 5px; }
+[hidden] { display: none !important; }
+
+#screen {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+#launcher {
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	background: radial-gradient(ellipse at center, #171a17e6, #030403f7 70%);
+	z-index: 2;
+	transition: opacity 300ms ease;
+}
+
+#launcher.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.launch-copy { margin-top: -20px; text-align: center; }
+.kicker { margin: 0 0 15px; font: 11px/1.5 monospace; letter-spacing: .28em; color: #9b9e92; }
+h1 { margin: 0; font-size: clamp(66px, 13vw, 152px); font-weight: 300; line-height: 1; letter-spacing: -.055em; color: #d8dbc9; }
+.credits { max-width: 640px; margin: 24px auto 0; padding: 0 20px; color: #9b9e92; font: 11px/1.8 monospace; letter-spacing: .02em; }
+.credits p { margin: 0; }
+.credits b { color: #d8dbc9; font-weight: 400; }
+.credits span { display: inline-block; }
+#start { margin-top: 38px; padding: 8px 12px; border: 0; background: none; cursor: pointer; font: 12px/1.5 monospace; letter-spacing: .17em; text-decoration: underline; text-underline-offset: 7px; }
+#start:disabled { color: #777b73; cursor: progress; text-decoration: none; }
+#start:not(:disabled):hover { color: #fff; }
+.launch-footer { position: absolute; bottom: 20px; width: 100%; padding: 0 12px; text-align: center; color: #777b73; font: 11px/1.5 monospace; }
+.launch-footer p { margin: 8px 0 0; }
+.launch-footer a { display: inline-block; margin-top: 8px; transition: color 180ms ease; }
+kbd { font: inherit; color: #b2b7aa; }
+
+#status { position: fixed; top: 20px; left: 50%; width: min(90%, 620px); transform: translateX(-50%); text-align: center; color: #ddd; font: 12px/1.5 monospace; z-index: 4; text-shadow: 0 1px 5px #000; pointer-events: none; }
+#debug { position: fixed; top: 12px; left: 12px; padding: 6px 9px; background: #0009; color: #b9bdb7; font: 11px/1.5 monospace; white-space: pre; z-index: 3; pointer-events: none; }
+
+@media (max-width: 520px) {
+	.launch-footer { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { #launcher { transition: none; } }

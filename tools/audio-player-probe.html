@@ -1,0 +1,89 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Medium — Web Audio timing check</title>
+<style>body{background:#10151d;color:#ddd;font:15px/1.5 monospace;margin:30px}button{font:inherit;padding:10px}pre{white-space:pre-wrap}</style>
+<h1>Web Audio timing check</h1>
+<p>Checks the actual decoded soundtrack, audio output clock, native opening delay, seeks, pause/resume, and endpoint.</p>
+<button id="run" disabled>Run audio checks</button>
+<pre id="status">Loading…</pre>
+<script type="module">
+import { AudioPlayer, NATIVE_LEAD, RING_DURATION, MP3_SKIP, audibleContextTime, sourceSchedule } from '../src/core/AudioPlayer.js';
+const player = new AudioPlayer();
+const status = document.querySelector('#status');
+const run = document.querySelector('#run');
+const lines = [];
+const results = [];
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+function log(line) { lines.push(line); status.textContent = lines.join('\n'); }
+function check(name, ok, detail) { results.push({ name, ok, detail }); log(`${ok ? 'PASS' : 'FAIL'} ${name}: ${detail}`); }
+await player.load('../assets/medium.mp3');
+log(`Ready. Decoded sample rate: ${player.context.sampleRate} Hz; duration: ${player._buffer.duration.toFixed(9)} s`);
+const reference = (await (await fetch('../tests/fixtures/audio-decode.json')).json()).sampleRates[player._buffer.sampleRate];
+if (reference) {
+ const pcm = player._buffer.getChannelData(0);
+ let best = { shift: 0, correlation: -1 }, zeroCorrelation;
+ for (let shift = -2048; shift <= 2048; shift++) {
+  let product = 0, actualEnergy = 0, expectedEnergy = 0;
+  reference.channel0.forEach((expected, i) => {
+   const actual = pcm[reference.start + i * reference.stride + shift];
+   product += actual * expected; actualEnergy += actual * actual; expectedEnergy += expected * expected;
+  });
+  const correlation = product / Math.sqrt(actualEnergy * expectedEnergy);
+  if (shift === 0) zeroCorrelation = correlation;
+  if (correlation > best.correlation) best = { shift, correlation };
+ }
+ // Different resampling filters may alter high-frequency sample values.
+ // Origin validation uses the correlation peak, not bit-identical amplitudes.
+ check('browser MP3 decode preserves source origin', Math.abs(best.shift) <= 1 && zeroCorrelation > 0.99, `best lag=${best.shift} samples; zero-lag PCM correlation=${zeroCorrelation.toFixed(9)}`);
+} else log(`No decode-origin fixture for ${player._buffer.sampleRate} Hz.`);
+log(`Native visual lead: ${(NATIVE_LEAD * 1000).toFixed(6)} ms`);
+log(`Opening silence: ${(RING_DURATION * 1000).toFixed(6)} ms; skipped MP3: ${(MP3_SKIP * 1000).toFixed(6)} ms`);
+run.disabled = false;
+run.addEventListener('click', async () => {
+ run.disabled = true;
+ try {
+  await player.play();
+  const ctx = player.context;
+  const contextAnchor = ctx.currentTime;
+  const wallAnchor = performance.now();
+  const initial = player.currentTime;
+  check('starts at beginning', initial < 0.05, `${initial.toFixed(6)} s`);
+  await wait(1200);
+  const first = player.currentTime;
+  const stamp = ctx.getOutputTimestamp?.();
+  const wallElapsed = (performance.now() - wallAnchor) / 1000;
+  const independentOutput = stamp && (stamp.contextTime || stamp.performanceTime) ? stamp.contextTime + (performance.now() - stamp.performanceTime) / 1000 - contextAnchor : null;
+  check('audible timeline advances', first > 0.1 && first <= wallElapsed + 0.02, `${first.toFixed(6)} s; wall=${wallElapsed.toFixed(6)} s; context=${(ctx.currentTime - contextAnchor).toFixed(6)} s`);
+  if (independentOutput !== null) check('timeline follows device output timestamp', Math.abs(first - independentOutput) < 0.01, `clock=${first.toFixed(6)} s; device=${independentOutput.toFixed(6)} s`);
+  log(`Output timestamp: ${JSON.stringify(ctx.getOutputTimestamp?.())}`);
+  log(`Latency: base=${ctx.baseLatency}s output=${ctx.outputLatency}s; render clock minus audible=${(ctx.currentTime - audibleContextTime(ctx, performance.now())).toFixed(6)}s`);
+  player.pause();
+  const frozen = player.currentTime;
+  await wait(100);
+  check('pause holds time', player.currentTime === frozen && player.paused, `${player.currentTime.toFixed(6)} s`);
+  player.currentTime = 40;
+  const schedule = sourceSchedule(player.currentTime);
+  check('seek maps to native MP3 offset', Math.abs(schedule.offset - 39.283083900226755) < 1e-9, `${schedule.offset.toFixed(9)} s`);
+  await player.play();
+  const samples = [];
+  for (let i = 0; i < 45; i++) {
+   await new Promise(requestAnimationFrame);
+   samples.push(player.currentTime);
+  }
+  check('output clock stays monotonic', samples.every((v,i) => i === 0 || v >= samples[i-1]), `${samples[0].toFixed(6)} → ${samples.at(-1).toFixed(6)} s`);
+  player.pause();
+  player.currentTime = player.duration - 0.15;
+  await player.play();
+  await wait(350);
+  check('stops at native endpoint', player.currentTime === player.duration && player.paused, `${player.currentTime.toFixed(6)} s`);
+  player.currentTime = 0;
+  await player.play();
+  await wait(80);
+  check('restart preserves opening silence', player.currentTime < RING_DURATION && !player.paused, `${player.currentTime.toFixed(6)} s`);
+  player.pause();
+  log(`Completed: ${results.filter(r=>r.ok).length}/${results.length} passed.`);
+ } catch (error) { log(`ERROR ${error.stack}`); player.pause(); }
+ run.disabled = false;
+});
+window.addEventListener('pagehide', () => player.dispose());
+</script>

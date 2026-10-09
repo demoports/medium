@@ -1,0 +1,61 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Medium texture upload probe</title>
+<style>body{background:#181b20;color:#e8edf4;font:16px/1.5 monospace;margin:32px}h1{font:600 22px system-ui}pre{white-space:pre-wrap}canvas{width:16px;height:16px;border:1px solid #666}</style>
+<h1>Checking transparent RGB through WebGL…</h1>
+<p>Each result is read from a one-pixel RGBA render target after GLSL <code>texelFetch</code>, with blending and color conversion disabled.</p>
+<pre id="result">Loading…</pre>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from '../vendor/three.module.js';
+import { loadNativeMipTexture } from '../src/core/Texture.js';
+const cases = [
+ {file:'medium_stunnel/pet_t1_03.png',xy:[14,0],expected:[240,0,0,0]},
+ {file:'medium_makina/makina_texture_1.png',xy:[1,0],expected:[255,0,255,0]},
+ {file:'medium_makina/makina2_texture_1.png',xy:[0,0],expected:[255,0,255,0]}
+];
+try {
+ const renderer = new THREE.WebGLRenderer({alpha:true,antialias:false,premultipliedAlpha:false});
+ renderer.setSize(1,1);renderer.outputColorSpace=THREE.LinearSRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
+ document.body.append(renderer.domElement);
+ const target = new THREE.WebGLRenderTarget(1,1,{format:THREE.RGBAFormat,type:THREE.UnsignedByteType,depthBuffer:false,stencilBuffer:false});
+ const uniforms={map:{value:null},texel:{value:new THREE.Vector2()},level:{value:0}};
+ const material = new THREE.RawShaderMaterial({glslVersion:THREE.GLSL3,uniforms,
+  vertexShader:'in vec3 position; void main(){gl_Position=vec4(position,1.0);}',
+  fragmentShader:'precision highp float; precision highp int; uniform sampler2D map; uniform vec2 texel; uniform int level; out vec4 result; void main(){result=texelFetch(map,ivec2(texel),level);}',
+  blending:THREE.NoBlending,depthTest:false,depthWrite:false,toneMapped:false});
+ const scene=new THREE.Scene(),camera=new THREE.Camera();scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),material));
+ const imageLoader=new THREE.TextureLoader();
+ async function read(texture,xy,level=0) {
+  texture.flipY=false;texture.premultiplyAlpha=false;texture.colorSpace=THREE.NoColorSpace;
+  texture.minFilter=THREE.NearestMipmapNearestFilter;texture.magFilter=THREE.NearestFilter;texture.generateMipmaps=!texture.userData.nativeMipmaps;texture.needsUpdate=true;
+  uniforms.map.value=texture;uniforms.texel.value.set(...xy);uniforms.level.value=level;
+  renderer.setRenderTarget(target);renderer.render(scene,camera);
+  const pixel=new Uint8Array(4);renderer.readRenderTargetPixels(target,0,0,1,1,pixel);return Array.from(pixel);
+ }
+ const results=[];
+ for(const item of cases) {
+  const url=new URL('../assets/textures/'+item.file,import.meta.url);
+  const image=await imageLoader.loadAsync(url.href);
+  const bitmap=await createImageBitmap(await (await fetch(url)).blob(),{premultiplyAlpha:'none',colorSpaceConversion:'none',imageOrientation:'none'});
+  const bitmapTexture=new THREE.Texture(bitmap);
+  const imageRGBA=await read(image,item.xy),bitmapRGBA=await read(bitmapTexture,item.xy);
+  const mipXY=item.xy.map(v=>Math.floor(v/2));
+  results.push({...item,imageRGBA,bitmapRGBA,imagePreserved:imageRGBA.every((v,i)=>v===item.expected[i]),bitmapPreserved:bitmapRGBA.every((v,i)=>v===item.expected[i]),mip1:{xy:mipXY,image:await read(image,mipXY,1),bitmap:await read(bitmapTexture,mipXY,1)}});
+  image.dispose();bitmapTexture.dispose();bitmap.close();
+  document.querySelector('#result').textContent=JSON.stringify(results,null,2);
+ }
+ const native=await loadNativeMipTexture(new URL('../assets/textures/medium_stunnel/pet_t1_03.mips.bin',import.meta.url));
+ const nativeBase=await read(native,[14,0]),nativeMip1=await read(native,[7,0],1);
+ const nativeOK=JSON.stringify(nativeBase)==='[240,0,0,0]'&&JSON.stringify(nativeMip1)==='[236,0,0,0]';
+ results.push({nativeMipChain:{base:nativeBase,mip1:nativeMip1,expectedMip1:[236,0,0,0],exact:nativeOK}});
+ document.querySelector('#result').textContent=JSON.stringify(results,null,2);
+ native.dispose();
+ const imageOK=results.slice(0,3).every(r=>r.imagePreserved),bitmapOK=results.slice(0,3).every(r=>r.bitmapPreserved);
+ document.querySelector('h1').textContent=`HTMLImage: ${imageOK?'RGB preserved':'RGB LOST'} · ImageBitmap none: ${bitmapOK?'RGB preserved':'RGB LOST'} · Native mip: ${nativeOK?'exact':'WRONG'}`;
+ document.body.dataset.complete='true';
+ renderer.setRenderTarget(null);target.dispose();material.dispose();renderer.dispose();
+} catch(error) {
+ document.querySelector('h1').textContent='Probe failed';document.querySelector('#result').textContent=error.stack;document.body.dataset.complete='error';
+}
+</script>

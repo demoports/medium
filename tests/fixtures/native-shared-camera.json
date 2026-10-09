@@ -1,0 +1,654 @@
+[
+  {
+    "tick": 95000,
+    "autoCamera": false,
+    "visibleComic": [
+      false,
+      false,
+      false
+    ],
+    "shakeA": [
+      0,
+      0,
+      0
+    ],
+    "shakeB": [
+      0,
+      0,
+      0
+    ],
+    "afterTick": {
+      "axes": [
+        55340,
+        0,
+        -35106,
+        11450,
+        -61953,
+        18048,
+        33185,
+        21374,
+        52314
+      ],
+      "position": [
+        -14357504,
+        -30327296,
+        0
+      ]
+    },
+    "callbacks": [
+      {
+        "effect": "comic",
+        "camera": {
+          "axes": [
+            55340,
+            0,
+            -35106,
+            11450,
+            -61953,
+            18048,
+            33185,
+            21374,
+            52314
+          ],
+          "position": [
+            -14357504,
+            -30327296,
+            0
+          ]
+        }
+      },
+      {
+        "effect": "tunnel",
+        "camera": {
+          "axes": [
+            55340,
+            0,
+            -35106,
+            11450,
+            -61953,
+            18048,
+            33185,
+            21374,
+            52314
+          ],
+          "position": [
+            -14357504,
+            -30327296,
+            0
+          ]
+        }
+      }
+    ],
+    "afterRender": {
+      "axes": [
+        55340,
+        0,
+        -35106,
+        11450,
+        -61953,
+        18048,
+        33185,
+        21374,
+        52314
+      ],
+      "position": [
+        -14357504,
+        -30327296,
+        0
+      ]
+    },
+    "renderCameraWrites": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4280609792
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 4264640000
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 0
+      }
+    ],
+    "afterRenderWithoutTick": {
+      "axes": [
+        55340,
+        0,
+        -35106,
+        11450,
+        -61953,
+        18048,
+        33185,
+        21374,
+        52314
+      ],
+      "position": [
+        -14357504,
+        -30327296,
+        0
+      ]
+    },
+    "cameraWritesWithoutTick": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4280609792
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 4264640000
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "tick": 95334,
+    "autoCamera": false,
+    "visibleComic": [
+      false,
+      false,
+      false
+    ],
+    "shakeA": [
+      0,
+      0,
+      0
+    ],
+    "shakeB": [
+      0,
+      0,
+      0
+    ],
+    "afterTick": {
+      "axes": [
+        -43012,
+        0,
+        -49447,
+        -31341,
+        -50690,
+        27262,
+        38245,
+        -41540,
+        -33268
+      ],
+      "position": [
+        -15475968,
+        47892480,
+        0
+      ]
+    },
+    "callbacks": [
+      {
+        "effect": "comic",
+        "camera": {
+          "axes": [
+            -43012,
+            0,
+            -49447,
+            -31341,
+            -50690,
+            27262,
+            38245,
+            -41540,
+            -33268
+          ],
+          "position": [
+            -15475968,
+            47892480,
+            0
+          ]
+        }
+      },
+      {
+        "effect": "tunnel",
+        "camera": {
+          "axes": [
+            -43012,
+            0,
+            -49447,
+            -31341,
+            -50690,
+            27262,
+            38245,
+            -41540,
+            -33268
+          ],
+          "position": [
+            -15475968,
+            47892480,
+            0
+          ]
+        }
+      }
+    ],
+    "afterRender": {
+      "axes": [
+        -43012,
+        0,
+        -49447,
+        -31341,
+        -50690,
+        27262,
+        38245,
+        -41540,
+        -33268
+      ],
+      "position": [
+        -15475968,
+        47892480,
+        0
+      ]
+    },
+    "renderCameraWrites": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4279491328
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 47892480
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 0
+      }
+    ],
+    "afterRenderWithoutTick": {
+      "axes": [
+        -43012,
+        0,
+        -49447,
+        -31341,
+        -50690,
+        27262,
+        38245,
+        -41540,
+        -33268
+      ],
+      "position": [
+        -15475968,
+        47892480,
+        0
+      ]
+    },
+    "cameraWritesWithoutTick": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4279491328
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 47892480
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "tick": 140000,
+    "autoCamera": false,
+    "visibleComic": [
+      true,
+      false,
+      false
+    ],
+    "shakeA": [
+      0,
+      0,
+      0
+    ],
+    "shakeB": [
+      0,
+      0,
+      0
+    ],
+    "afterTick": {
+      "axes": [
+        -65264,
+        0,
+        -5999,
+        -2939,
+        -57132,
+        31974,
+        5229,
+        -32110,
+        -56892
+      ],
+      "position": [
+        -16994260,
+        57795275,
+        67108864
+      ]
+    },
+    "callbacks": [
+      {
+        "effect": "comic",
+        "camera": {
+          "axes": [
+            -65264,
+            0,
+            -5999,
+            -2939,
+            -57132,
+            31974,
+            5229,
+            -32110,
+            -56892
+          ],
+          "position": [
+            -16994260,
+            57795275,
+            67108864
+          ]
+        }
+      },
+      {
+        "effect": "tunnel",
+        "camera": {
+          "axes": [
+            -65264,
+            0,
+            -5999,
+            -2939,
+            -57132,
+            31974,
+            5229,
+            -32110,
+            -56892
+          ],
+          "position": [
+            -16994260,
+            57795275,
+            67108864
+          ]
+        }
+      }
+    ],
+    "afterRender": {
+      "axes": [
+        -65264,
+        0,
+        -5999,
+        -2939,
+        -57132,
+        31974,
+        5229,
+        -32110,
+        -56892
+      ],
+      "position": [
+        -16994260,
+        57795275,
+        67108864
+      ]
+    },
+    "renderCameraWrites": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4277973036
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 57795275
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 67108864
+      }
+    ],
+    "afterRenderWithoutTick": {
+      "axes": [
+        -65264,
+        0,
+        -5999,
+        -2939,
+        -57132,
+        31974,
+        5229,
+        -32110,
+        -56892
+      ],
+      "position": [
+        -16994260,
+        57795275,
+        67108864
+      ]
+    },
+    "cameraWritesWithoutTick": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4277973036
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 57795275
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 67108864
+      }
+    ]
+  },
+  {
+    "tick": 140334,
+    "autoCamera": false,
+    "visibleComic": [
+      true,
+      false,
+      false
+    ],
+    "shakeA": [
+      3081191,
+      -2559761,
+      -329200
+    ],
+    "shakeB": [
+      0,
+      0,
+      0
+    ],
+    "afterTick": {
+      "axes": [
+        -64041,
+        0,
+        -13922,
+        -6493,
+        -57971,
+        29869,
+        12315,
+        -30569,
+        -56649
+      ],
+      "position": [
+        -30074027,
+        51867079,
+        67108864
+      ]
+    },
+    "callbacks": [
+      {
+        "effect": "comic",
+        "camera": {
+          "axes": [
+            -64041,
+            0,
+            -13922,
+            -6493,
+            -57971,
+            29869,
+            12315,
+            -30569,
+            -56649
+          ],
+          "position": [
+            -30074027,
+            51867079,
+            67108864
+          ]
+        }
+      },
+      {
+        "effect": "tunnel",
+        "camera": {
+          "axes": [
+            -64041,
+            0,
+            -13922,
+            -6493,
+            -57971,
+            29869,
+            12315,
+            -30569,
+            -56649
+          ],
+          "position": [
+            -26992836,
+            49307318,
+            66779664
+          ]
+        }
+      }
+    ],
+    "afterRender": {
+      "axes": [
+        -64041,
+        0,
+        -13922,
+        -6493,
+        -57971,
+        29869,
+        12315,
+        -30569,
+        -56649
+      ],
+      "position": [
+        -26992836,
+        49307318,
+        66779664
+      ]
+    },
+    "renderCameraWrites": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4267974460
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 49307318
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 66779664
+      }
+    ],
+    "afterRenderWithoutTick": {
+      "axes": [
+        -64041,
+        0,
+        -13922,
+        -6493,
+        -57971,
+        29869,
+        12315,
+        -30569,
+        -56649
+      ],
+      "position": [
+        -23911645,
+        46747557,
+        66450464
+      ]
+    },
+    "cameraWritesWithoutTick": [
+      {
+        "stage": "comic",
+        "pc": "0x40af6a",
+        "offset": 40,
+        "size": 4,
+        "value": 4271055651
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af70",
+        "offset": 44,
+        "size": 4,
+        "value": 46747557
+      },
+      {
+        "stage": "comic",
+        "pc": "0x40af76",
+        "offset": 48,
+        "size": 4,
+        "value": 66450464
+      }
+    ]
+  }
+]

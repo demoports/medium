@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Medium startup profile probe</title>
+<style>body{margin:0;background:#000;color:#fff;font:14px system-ui}canvas{display:block;width:320px;height:240px}label,output{display:block;margin:8px}</style>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<canvas id="screen" width="640" height="480" aria-label="Medium profile sample"></canvas>
+<label>Startup clock skips <input id="seed" type="number" min="0" max="100" value="0"></label>
+<output id="status">Loading…</output>
+<script type="module">
+import { Demo } from '../src/Demo.js';
+const time=Number(new URLSearchParams(location.search).get('t')||40.32),demo=new Demo();
+await demo.init(document.querySelector('canvas'));
+const timeline=demo.timeline,resetParticles=timeline.resetTunnelParticles.bind(timeline);
+timeline.resetTunnelParticles=()=>{
+ if(timeline.state.tick===0&&timeline.state.randomA===1118820455&&timeline.state.randomB===1922350462){
+  for(let i=0;i<Number(document.querySelector('input').value);i++)timeline.randomWord();
+ }
+ resetParticles();
+};
+function render(){timeline.reset();demo.render(time);document.querySelector('output').textContent=`Rendered ${time.toFixed(2)} s, startup clock skips ${document.querySelector('input').value}.`;}
+document.querySelector('input').addEventListener('input',render);
+render();
+</script></html>

@@ -1,0 +1,71 @@
+{
+  "purpose": "Select a deterministic Comic spring cadence by comparing the foreground silhouette.",
+  "reference": {
+    "image": "video-195.jpg from the session frame comparison",
+    "imageSize": [
+      805,
+      604
+    ],
+    "nominalVideoTimeSeconds": 195,
+    "portTimeSeconds": 195.32,
+    "comparisonSize": [
+      640,
+      480
+    ],
+    "alignment": "Existing approximate frame-comparison offset; exact audiovisual synchronization was not independently established."
+  },
+  "measurement": {
+    "referenceMask": "RGB mask: R > 1.13*G, B > 0.95*R, B > 50; 3x3 maximum filter; largest connected component; interior holes filled. Pixels y >= 350 excluded to separate the attached tube.",
+    "candidateMask": "Union of the projected foreground Comic blob triangles at 640x480. Uses the verified object/camera transforms and the full timeline, including spring integration during photo freezes.",
+    "metric": "Binary intersection over union (IoU). This measures silhouette agreement; it does not measure material, lighting, texture coordinates, clipping, or pixel-perfect rendering.",
+    "referenceBounds": [
+      250,
+      202,
+      490,
+      350
+    ],
+    "port60HzBounds": [
+      247,
+      200,
+      486,
+      345
+    ]
+  },
+  "silhouetteIoUByHz": {
+    "25": 0.6092,
+    "30": 0.6322,
+    "50": 0.7915,
+    "60": 0.9427,
+    "75": 0.7624,
+    "100": 0.6185,
+    "120": 0.6441,
+    "144": 0.7156,
+    "180": 0.5825,
+    "200": 0.5231,
+    "240": 0.4639,
+    "300": 0.4265,
+    "360": 0.3927,
+    "500": 0.3838
+  },
+  "conclusion": "Retain the canonical 60 Hz spring cadence. Higher cadences substantially worsen this foreground silhouette. The enclosure clipping was separately resolved by restoring the native quarter-scale view transform.",
+  "nativeEvidence": {
+    "transformFixture": "tests/fixtures/comic-transforms.json",
+    "transformVerifier": "tools/verify-comic-transforms.py",
+    "projectionFixture": "tests/fixtures/native-projection.json",
+    "projectionVerifier": "tools/verify-projection.py",
+    "nativeCameraFar": 10240,
+    "nativeGeometryProbe": "At the 195.32s timeline state, outer vertex 2611 was replayed through 1997 native spring integrations with the actual elapsed-age history. Its final local coordinates were [-7400.472,6869.155,-5815.036], versus [-7398.916,6870.422,-5813.434] in JavaScript. The raw camera depth is about 15710; native camera preparation scales this by one quarter before clipping and fog, placing it inside the original far limit.",
+    "viewTransformFixture": "tests/fixtures/native-view-transform.json"
+  },
+  "referenceProfile": {
+    "comicCameraFar": 10240,
+    "nativeViewScale": 0.25,
+    "rationale": "All effects use the native view-space clip limits. The earlier extended-far-plane workaround was superseded by the complete native camera-preparation oracle."
+  },
+  "caveats": [
+    "The cadence fit is a single-frame foreground measurement and does not establish the original executable's frame rate throughout the demo.",
+    "Reference mask thresholds and the tube exclusion introduce a few pixels of boundary uncertainty.",
+    "Native normalization and fixed-point integration produce small deviations from the floating-point spring adaptation.",
+    "The reference capture's exact hardware, render cadence, and runtime configuration are unknown."
+  ]
+}

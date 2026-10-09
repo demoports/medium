@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#000000">
+	<meta name="description" content="medium by einklang.net — a JavaScript port of the 2001 demo.">
+	<title>medium · einklang.net</title>
+	<link rel="icon" href="data:,">
+	<link rel="stylesheet" href="./styles.css">
+	<script type="importmap">
+	{
+		"imports": {
+			"medium/": "./src/",
+			"three": "./vendor/three.module.js"
+		}
+	}
+	</script>
+</head>
+<body>
+	<canvas id="screen" width="640" height="480" aria-label="medium demo"></canvas>
+	<main id="launcher" aria-labelledby="title">
+		<div class="launch-copy">
+			<p class="kicker"><a href="https://www.einklang.net/" target="_blank" rel="noopener noreferrer">einklang.net</a> · 2001</p>
+			<h1 id="title">medium</h1>
+			<div class="credits">
+				<p><span><b>Pet</b> code, design &amp; music mix</span> · <span><b>Chaos</b> DirectX engine</span></p>
+				<p><span><b>Photoniclabor</b> Makina graphics</span> · <span><b>T_jurn</b> B/W ping-pong</span></p>
+				<p>music by <b>G-Man</b> · <b>Thomas Krome</b> (<b>Adam Beyer</b> mix) · <b>Ultratubes</b></p>
+			</div>
+			<button id="start" type="button" disabled>loading</button>
+		</div>
+		<div class="launch-footer">
+			<p><kbd>space</kbd> pause &nbsp;·&nbsp; <kbd>← →</kbd> seek &nbsp;·&nbsp; <kbd>f</kbd> fullscreen &nbsp;·&nbsp; <kbd>esc</kbd> stop</p>
+			<a href="https://github.com/demoports/medium" target="_blank" rel="noopener noreferrer">github</a>
+		</div>
+	</main>
+	<div id="status" role="status" aria-live="polite"></div>
+	<div id="debug" hidden></div>
+	<script type="module" src="./src/main.js"></script>
+</body>
+</html>

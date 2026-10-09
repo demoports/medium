@@ -1,0 +1,247 @@
+{
+  "checked": "2026-10-09",
+  "finding": "No alternate executable revision found. The current Scene.org archive, two of its mirrors, and the author website ZIP archived in 2006 contain byte-identical medium.exe, packfile.pak and file_id.diz. The author ZIP has a different archive hash because it omits the Scene.org advertisement file and ZIP comment. This does not establish the executable used to record either YouTube video.",
+  "archives": [
+    {
+      "url": "https://files.scene.org/view/parties/2001/theparty01/demo/medium.zip",
+      "archiveBytes": 8938991,
+      "archiveSha256": "336de22c1c7597c6cb271eec15717841ac24618ac4b97571904d2abe86a82620",
+      "files": [
+        {
+          "name": "medium.exe",
+          "bytes": 352256,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            21,
+            29,
+            24
+          ],
+          "sha256": "fac6493d24e74c85a4de230d197301820087bbf6dec2c5c4b1d851b67d7dab92"
+        },
+        {
+          "name": "file_id.diz",
+          "bytes": 95,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            15,
+            27,
+            40
+          ],
+          "sha256": "9211467c50c5e84550564637b867f2fec08e7784facbf0c61c2dc2731a979f16"
+        },
+        {
+          "name": "packfile.pak",
+          "bytes": 11407360,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            13,
+            47,
+            44
+          ],
+          "sha256": "5143501e75fcb341b9514f4d1a36e5e237ad0bbc4c9706a2bc091211bb74b071"
+        },
+        {
+          "name": "scene.org",
+          "bytes": 1989,
+          "zipTimestamp": [
+            2001,
+            12,
+            29,
+            13,
+            8,
+            50
+          ],
+          "sha256": "f29eafccf3b4a32c456d003089c1b43e8fc94216cfed97f69970eb8b04bf52fa"
+        }
+      ]
+    },
+    {
+      "url": "https://archive.scene.org/pub/parties/2001/theparty01/demo/medium.zip",
+      "archiveBytes": 8938991,
+      "archiveSha256": "336de22c1c7597c6cb271eec15717841ac24618ac4b97571904d2abe86a82620",
+      "files": [
+        {
+          "name": "medium.exe",
+          "bytes": 352256,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            21,
+            29,
+            24
+          ],
+          "sha256": "fac6493d24e74c85a4de230d197301820087bbf6dec2c5c4b1d851b67d7dab92"
+        },
+        {
+          "name": "file_id.diz",
+          "bytes": 95,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            15,
+            27,
+            40
+          ],
+          "sha256": "9211467c50c5e84550564637b867f2fec08e7784facbf0c61c2dc2731a979f16"
+        },
+        {
+          "name": "packfile.pak",
+          "bytes": 11407360,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            13,
+            47,
+            44
+          ],
+          "sha256": "5143501e75fcb341b9514f4d1a36e5e237ad0bbc4c9706a2bc091211bb74b071"
+        },
+        {
+          "name": "scene.org",
+          "bytes": 1989,
+          "zipTimestamp": [
+            2001,
+            12,
+            29,
+            13,
+            8,
+            50
+          ],
+          "sha256": "f29eafccf3b4a32c456d003089c1b43e8fc94216cfed97f69970eb8b04bf52fa"
+        }
+      ]
+    },
+    {
+      "url": "https://mirror.netcologne.de/scene.org/parties/2001/theparty01/demo/medium.zip",
+      "archiveBytes": 8938991,
+      "archiveSha256": "336de22c1c7597c6cb271eec15717841ac24618ac4b97571904d2abe86a82620",
+      "files": [
+        {
+          "name": "medium.exe",
+          "bytes": 352256,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            21,
+            29,
+            24
+          ],
+          "sha256": "fac6493d24e74c85a4de230d197301820087bbf6dec2c5c4b1d851b67d7dab92"
+        },
+        {
+          "name": "file_id.diz",
+          "bytes": 95,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            15,
+            27,
+            40
+          ],
+          "sha256": "9211467c50c5e84550564637b867f2fec08e7784facbf0c61c2dc2731a979f16"
+        },
+        {
+          "name": "packfile.pak",
+          "bytes": 11407360,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            13,
+            47,
+            44
+          ],
+          "sha256": "5143501e75fcb341b9514f4d1a36e5e237ad0bbc4c9706a2bc091211bb74b071"
+        },
+        {
+          "name": "scene.org",
+          "bytes": 1989,
+          "zipTimestamp": [
+            2001,
+            12,
+            29,
+            13,
+            8,
+            50
+          ],
+          "sha256": "f29eafccf3b4a32c456d003089c1b43e8fc94216cfed97f69970eb8b04bf52fa"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20060901144334id_/http://www.einklang.net:80/data/demos/medium.zip",
+      "archiveBytes": 8937549,
+      "archiveSha256": "b8d1156f23bfa3df9889eb6877d2f735487ee7b91de10a6a7c13e0735fff5476",
+      "files": [
+        {
+          "name": "medium.exe",
+          "bytes": 352256,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            21,
+            29,
+            24
+          ],
+          "sha256": "fac6493d24e74c85a4de230d197301820087bbf6dec2c5c4b1d851b67d7dab92"
+        },
+        {
+          "name": "file_id.diz",
+          "bytes": 95,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            15,
+            27,
+            40
+          ],
+          "sha256": "9211467c50c5e84550564637b867f2fec08e7784facbf0c61c2dc2731a979f16"
+        },
+        {
+          "name": "packfile.pak",
+          "bytes": 11407360,
+          "zipTimestamp": [
+            2001,
+            12,
+            28,
+            13,
+            47,
+            44
+          ],
+          "sha256": "5143501e75fcb341b9514f4d1a36e5e237ad0bbc4c9706a2bc091211bb74b071"
+        }
+      ]
+    }
+  ],
+  "catalogues": [
+    "https://www.pouet.net/prod.php?which=4771",
+    "https://demozoo.org/productions/26021/",
+    "https://files.scene.org/search/?q=medium",
+    "https://files.scene.org/browse/demos/groups/einklang.net/"
+  ],
+  "unavailable": [
+    "Current author download URL returns 404",
+    "Sesse mirror hostname did not resolve"
+  ],
+  "videoCaptureProvenance": "Unknown; no binary/configuration metadata was obtained for wYvn653Fefw or DnwhgSaetks.",
+  "executableMetadata": {
+    "bytes": 352256,
+    "sha256": "fac6493d24e74c85a4de230d197301820087bbf6dec2c5c4b1d851b67d7dab92",
+    "peLinkerTimestampUTC": "2001-12-28T20:29:22Z",
+    "zipTimestampWithoutTimezone": "2001-12-28T21:29:24",
+    "releaseLabel": "party version"
+  }
+}

@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Medium audio sync probe</title>
+<style>body{font:14px system-ui;background:#16191d;color:white;margin:16px}canvas{width:640px;height:480px;display:block}label,button{margin:8px}pre{white-space:pre-wrap}</style>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<canvas aria-label="Medium timing probe"></canvas><label>Start time <input id="time" type="number" value="40" step="1"></label><button disabled id="run">Benchmark 120 live frames</button><pre id="status">Loading…</pre>
+<script type="module">
+import{Demo}from'../src/Demo.js';
+const demo=new Demo();await demo.init(document.querySelector('canvas'));const audio=new Audio('../assets/medium.mp3');audio.preload='auto';
+const button=document.querySelector('button'),status=document.querySelector('pre');button.disabled=false;status.textContent='Ready.';
+button.onclick=async()=>{button.disabled=true;const t=Number(document.querySelector('input').value);audio.currentTime=t;demo.render(t);await audio.play();let n=0,old=0,samples=[];
+function frame(now){const start=performance.now(),clock=audio.currentTime;demo.render(clock);const end=performance.now();samples.push({interval:old?now-old:0,renderMs:end-start,audioTime:clock,visualTime:demo.state.time,quantizationMs:(clock-demo.state.time)*1000});old=now;if(++n<120)requestAnimationFrame(frame);else{audio.pause();const summarize=key=>{const a=samples.slice(1).map(s=>s[key]).sort((x,y)=>x-y);return{median:a[Math.floor(a.length/2)],p95:a[Math.floor(a.length*.95)],max:a.at(-1)}};status.textContent=JSON.stringify({time:t,audioElapsed:audio.currentTime-t,samples:n,frameIntervalMs:summarize('interval'),renderMs:summarize('renderMs'),quantizationMs:summarize('quantizationMs')},null,2);button.disabled=false;}}
+requestAnimationFrame(frame);};
+</script></html>

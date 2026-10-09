@@ -1,0 +1,287 @@
+{
+  "sampleRate": 44100,
+  "ringFrames": 32768,
+  "ringBytes": 131072,
+  "decoder": {
+    "initializerConsumedBits": 3336,
+    "firstMp3FrameBytes": 417,
+    "pcmBytesPerFrame": 4608,
+    "stereoSamplesPerFrame": 1152,
+    "firstFourOutputFramesSha256": "41ba63b604bb3a5600ca2e077d67903175a5d6fdcadc876f70a9e4661a29787c",
+    "modernDecoderComparison": [
+      {
+        "modernSampleShift": 0,
+        "correlation": 0.2120399633375086
+      },
+      {
+        "modernSampleShift": 576,
+        "correlation": -0.17319249942377968
+      },
+      {
+        "modernSampleShift": 1152,
+        "correlation": -0.99999927686793
+      },
+      {
+        "modernSampleShift": 1728,
+        "correlation": -0.17972482579143606
+      },
+      {
+        "modernSampleShift": 2304,
+        "correlation": 0.20833990885848938
+      }
+    ]
+  },
+  "startupCases": [
+    {
+      "startupElapsedMs": 0,
+      "initialMainloopClockMs": 0,
+      "samples": [
+        {
+          "playFrame": 512,
+          "audioClockMs": 11,
+          "sequencerTicks": 11,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 512,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 4096,
+          "audioClockMs": 92,
+          "sequencerTicks": 92,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 4096,
+            "offset": 3584,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 16384,
+          "audioClockMs": 371,
+          "sequencerTicks": 371,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 16384,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 32768,
+          "audioClockMs": 742,
+          "sequencerTicks": 742,
+          "audibleDecodedFrame": 0,
+          "lastLock": {
+            "playFrame": 32768,
+            "offset": 32256,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 33280,
+          "audioClockMs": 754,
+          "sequencerTicks": 754,
+          "audibleDecodedFrame": 512,
+          "lastLock": {
+            "playFrame": 33280,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 49152,
+          "audioClockMs": 1114,
+          "sequencerTicks": 1114,
+          "audibleDecodedFrame": 16384,
+          "lastLock": {
+            "playFrame": 49152,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 65536,
+          "audioClockMs": 1485,
+          "sequencerTicks": 1485,
+          "audibleDecodedFrame": 32768,
+          "lastLock": {
+            "playFrame": 65536,
+            "offset": 32256,
+            "frames": 512
+          }
+        }
+      ]
+    },
+    {
+      "startupElapsedMs": 2,
+      "initialMainloopClockMs": 2,
+      "samples": [
+        {
+          "playFrame": 512,
+          "audioClockMs": 11,
+          "sequencerTicks": 9,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 512,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 4096,
+          "audioClockMs": 92,
+          "sequencerTicks": 90,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 4096,
+            "offset": 3584,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 16384,
+          "audioClockMs": 371,
+          "sequencerTicks": 369,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 16384,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 32768,
+          "audioClockMs": 742,
+          "sequencerTicks": 740,
+          "audibleDecodedFrame": 0,
+          "lastLock": {
+            "playFrame": 32768,
+            "offset": 32256,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 33280,
+          "audioClockMs": 754,
+          "sequencerTicks": 752,
+          "audibleDecodedFrame": 512,
+          "lastLock": {
+            "playFrame": 33280,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 49152,
+          "audioClockMs": 1114,
+          "sequencerTicks": 1112,
+          "audibleDecodedFrame": 16384,
+          "lastLock": {
+            "playFrame": 49152,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 65536,
+          "audioClockMs": 1485,
+          "sequencerTicks": 1483,
+          "audibleDecodedFrame": 32768,
+          "lastLock": {
+            "playFrame": 65536,
+            "offset": 32256,
+            "frames": 512
+          }
+        }
+      ]
+    },
+    {
+      "startupElapsedMs": 7,
+      "initialMainloopClockMs": 7,
+      "samples": [
+        {
+          "playFrame": 512,
+          "audioClockMs": 11,
+          "sequencerTicks": 4,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 512,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 4096,
+          "audioClockMs": 92,
+          "sequencerTicks": 85,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 4096,
+            "offset": 3584,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 16384,
+          "audioClockMs": 371,
+          "sequencerTicks": 364,
+          "audibleDecodedFrame": null,
+          "lastLock": {
+            "playFrame": 16384,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 32768,
+          "audioClockMs": 742,
+          "sequencerTicks": 735,
+          "audibleDecodedFrame": 0,
+          "lastLock": {
+            "playFrame": 32768,
+            "offset": 32256,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 33280,
+          "audioClockMs": 754,
+          "sequencerTicks": 747,
+          "audibleDecodedFrame": 512,
+          "lastLock": {
+            "playFrame": 33280,
+            "offset": 0,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 49152,
+          "audioClockMs": 1114,
+          "sequencerTicks": 1107,
+          "audibleDecodedFrame": 16384,
+          "lastLock": {
+            "playFrame": 49152,
+            "offset": 15872,
+            "frames": 512
+          }
+        },
+        {
+          "playFrame": 65536,
+          "audioClockMs": 1485,
+          "sequencerTicks": 1478,
+          "audibleDecodedFrame": 32768,
+          "lastLock": {
+            "playFrame": 65536,
+            "offset": 32256,
+            "frames": 512
+          }
+        }
+      ]
+    }
+  ],
+  "decodedPcmLeadSeconds": 0.7430385487528345,
+  "fullMp3LeadSeconds": 0.7169160997732427
+}

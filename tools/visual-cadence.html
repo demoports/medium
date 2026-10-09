@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Medium shared render-cadence probe</title>
+<style>body{margin:0;background:#11151b;color:#eef;font:14px system-ui}canvas{display:block;width:640px;height:480px}form,p,pre{margin:12px}input{width:90px;margin-right:12px}button{margin-right:6px}pre{white-space:pre-wrap}</style>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<canvas aria-label="Medium shared cadence comparison"></canvas>
+<form><label>Time <input id="time" type="number" step=".001" value="140.38"></label>
+<label>Frames per second <input id="rate" type="number" min="1" max="1000" step="1" value="60"></label><button>Render</button>
+<button type="button" data-rate="50">50 Hz</button><button type="button" data-rate="55">55 Hz</button><button type="button" data-rate="60">60 Hz</button><button type="button" data-rate="65">65 Hz</button></form>
+<p>QA only. One shared frame clock advances visible Comic springs, Tunnel damping, and the lens/fog cache. Sequencer and effect updates retain their original 1 ms clock; photos continue rendering. The frozen Comic rotation profile is unchanged.</p>
+<pre>Loading…</pre>
+<script type="module">
+import { Demo } from '../src/Demo.js';
+import { installCadenceProfile } from './cadence-profile.js';
+const parameters=new URLSearchParams(location.search),time=document.querySelector('#time'),rate=document.querySelector('#rate'),output=document.querySelector('pre');
+if(parameters.has('t'))time.value=parameters.get('t');
+if(parameters.has('rate'))rate.value=parameters.get('rate');
+try {
+ const demo=new Demo();await demo.init(document.querySelector('canvas'));
+ const originalReset=demo.timeline.hooks.onReset,originalRenderFrame=demo.timeline.renderFrame;
+ function render(){
+  document.body.dataset.complete='false';
+  // Restore these entry points before installing a fresh diagnostic profile.
+  demo.timeline.hooks.onReset=originalReset;
+  demo.timeline.renderFrame=originalRenderFrame;
+  const stats=installCadenceProfile(demo,Number(rate.value));
+  demo.render(Number(time.value));
+  const state=demo.state,comic=state.effects.comic,tunnel=state.effects.tunnel;
+  output.textContent=JSON.stringify({requestedTime:Number(time.value),displayedTime:state.time,...stats,layers:state.layers,
+   comic:{mode:comic.mode,age:comic.elapsedMs,phase:comic.phase,projection:state.renderCache.projection.zoom,cameraPosition:demo.effects.comic.camera.position.toArray()},
+   tunnel:{mode:tunnel.mode,phase:tunnel.phase,cameraX:tunnel.cameraX,cameraY:tunnel.cameraY,cameraVX:tunnel.cameraVX,cameraVY:tunnel.cameraVY,radiusX:tunnel.radiusX,radiusY:tunnel.radiusY,radiusVX:tunnel.radiusVX,radiusVY:tunnel.radiusVY}},null,2);
+  history.replaceState(null,'',`?t=${time.value}&rate=${rate.value}`);
+  document.body.dataset.complete='true';
+ }
+ document.querySelector('form').onsubmit=event=>{event.preventDefault();render();};
+ for(const input of [time,rate])input.onchange=render;
+ for(const button of document.querySelectorAll('[data-rate]'))button.onclick=()=>{rate.value=button.dataset.rate;render();};
+ render();
+}catch(error){output.textContent=error.stack;document.body.dataset.complete='error';}
+</script></html>

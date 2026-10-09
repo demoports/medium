@@ -1,0 +1,176 @@
+{
+  "particles": [
+    {
+      "phase": 0,
+      "velocity": 0,
+      "sha256": "fc89bfb90dd51a1466cab689722343099b167aee75df810e3bc1c7bbd55b3fec"
+    },
+    {
+      "phase": 1234,
+      "velocity": -2,
+      "sha256": "9d2635b53bf889904a9d561203550360e117cfcfad36ab9e2258ed9c6a91fb94"
+    },
+    {
+      "phase": 40320,
+      "velocity": 0,
+      "sha256": "6202d3cd35a49abc48a957476ea5ec4566c5d999098be59f8159dfbc43a464c2"
+    },
+    {
+      "phase": 98217,
+      "velocity": 7,
+      "sha256": "f1a97dac779bc063bc46b9095bf7beac4556b80492161dd2fd9895ea237d9616"
+    }
+  ],
+  "patches": [
+    {
+      "radius": -7168,
+      "phase": 0,
+      "pulse": 0,
+      "lighting": false,
+      "vertices": 6144,
+      "sha256": "39041c8c9977ff3b2761fb100ddaa3f428e9ac2b80fdbb9d03c447ebc8f06c77"
+    },
+    {
+      "radius": 25173,
+      "phase": 1234,
+      "pulse": 35271,
+      "lighting": true,
+      "vertices": 6144,
+      "sha256": "713bdf59a1012d34677efb31fbf7ce4f25f3e41d0db612aafb2df5af964932d8"
+    },
+    {
+      "radius": 65259,
+      "phase": 40320,
+      "pulse": 14528,
+      "lighting": true,
+      "vertices": 6144,
+      "sha256": "3b377175b50a8014e734e3dfb330d3a9f866666bf298045e7fa298708c59efd8"
+    }
+  ],
+  "machines": [
+    {
+      "model": "makina",
+      "part": 0,
+      "phase": 0,
+      "vertices": 1280,
+      "sha256": "72697b21ad2c8cf36d2bf16cdb0eb9951ccb9900768991f3318ae8b56e24023e"
+    },
+    {
+      "model": "makina",
+      "part": 1,
+      "phase": 0,
+      "vertices": 848,
+      "sha256": "80d6faae517950f8dc69ce63f4367be1d3d76fe379c3fc4b63f1d9154d156259"
+    },
+    {
+      "model": "makina",
+      "part": 2,
+      "phase": 0,
+      "vertices": 1224,
+      "sha256": "ec6385b05b983acd5ae81ebdcd730ffc7d58042d209ffb20dab7ed356d54e8d4"
+    },
+    {
+      "model": "makina",
+      "part": 3,
+      "phase": 0,
+      "vertices": 2382,
+      "sha256": "e779258036a72d5069ac0c7c9325e484b26c2642488b8c236b2786017bf4a563"
+    },
+    {
+      "model": "makina",
+      "part": 3,
+      "phase": 32768,
+      "vertices": 2382,
+      "sha256": "3b5548644c36beeeaf67bdb11f2be865fbf14c09a1bd1fe47e139324f70cd15d"
+    },
+    {
+      "model": "makina",
+      "part": 3,
+      "phase": 154771,
+      "vertices": 2382,
+      "sha256": "52ce292f74e88eaada79145a8e90c32958e9174183d41a5b90bdde7cfba0874f"
+    },
+    {
+      "model": "makina",
+      "part": 3,
+      "phase": 720895,
+      "vertices": 2382,
+      "sha256": "fe67de1c2c2e6110110b35e4a8db529d4b95efe1a6926468613d463397e01f74"
+    },
+    {
+      "model": "makina2",
+      "part": 0,
+      "phase": 0,
+      "vertices": 1280,
+      "sha256": "4fc6659006ffcf95fdd4a0863d86794824479779ea1633618cfdc10f7cbef65d"
+    },
+    {
+      "model": "makina2",
+      "part": 1,
+      "phase": 0,
+      "vertices": 848,
+      "sha256": "03130b579be7655eda4a508d3f8fd3d18414d202b30e5f539e629799d982731f"
+    },
+    {
+      "model": "makina2",
+      "part": 2,
+      "phase": 0,
+      "vertices": 1224,
+      "sha256": "9ed04a00c481e4644def9ce46c471a9f62e938008b17ee0af719b7b815f2c228"
+    },
+    {
+      "model": "makina2",
+      "part": 3,
+      "phase": 0,
+      "vertices": 2382,
+      "sha256": "89405cdef38cd2daa786143bdbbeac151b217715590805cb4c58e969cce10084"
+    },
+    {
+      "model": "makina2",
+      "part": 3,
+      "phase": 32768,
+      "vertices": 2382,
+      "sha256": "15dad1b9a93809129af889188e7d958158045f0e4fcb5a645c103b8c478aca3a"
+    },
+    {
+      "model": "makina2",
+      "part": 3,
+      "phase": 154771,
+      "vertices": 2382,
+      "sha256": "684717a11f94c04af1a64b320977b1e09ec9d22df086812efa9806cee2c4565f"
+    },
+    {
+      "model": "makina2",
+      "part": 3,
+      "phase": 720895,
+      "vertices": 2382,
+      "sha256": "afd1351d69e96541334aef044b2bb55434442b89e3f34589c7a45aabca44379d"
+    }
+  ],
+  "machineOrder": [
+    [
+      "makina",
+      2
+    ],
+    [
+      "makina2",
+      2
+    ],
+    [
+      "makina",
+      1
+    ],
+    [
+      "makina",
+      0
+    ],
+    [
+      "makina2",
+      1
+    ],
+    [
+      "makina",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "medium-einklang-port",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --import ./tools/register-three.mjs --test tests/*.test.*"
+  }
+}

@@ -1,0 +1,4 @@
+capstone>=5,<6
+pefile>=2023.2.7
+unicorn>=2,<3
+Pillow>=10

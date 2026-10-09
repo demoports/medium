@@ -1,0 +1,869 @@
+[
+  {
+    "state": {
+      "tick": 1,
+      "row": 10.008973121643066,
+      "row32": 10.008973121643066,
+      "row64": 10.008973121643066,
+      "row128": 10.008973121643066,
+      "songRow": 10.008973121643066,
+      "spring": 0.001009989995509386,
+      "springVelocity": 9.999999747378752e-06,
+      "cosine": 1.0,
+      "randomA": 1335233917,
+      "randomB": -1296746562,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 1,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -0.008973333984613419,
+      "rowY": -0.008973333984613419,
+      "rowZ": -0.008973333984613419,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 1,
+      "beats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 1000,
+      "row": 2.9731998443603516,
+      "row32": 18.973438262939453,
+      "row64": 18.973438262939453,
+      "row128": 18.973438262939453,
+      "songRow": 2.9731998443603516,
+      "spring": -0.888247013092041,
+      "springVelocity": -0.002954781986773014,
+      "cosine": -0.2342308759689331,
+      "randomA": 1335233917,
+      "randomB": -1296746562,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 1000,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -8.973226547241211,
+      "rowY": -8.973226547241211,
+      "rowZ": -8.973226547241211,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 1000,
+      "beats": [
+        0,
+        0,
+        45273,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 10000,
+      "row": 3.7318429946899414,
+      "row32": 3.7366278171539307,
+      "row64": 35.73093032836914,
+      "row128": 99.72572326660156,
+      "songRow": 3.7318429946899414,
+      "spring": -1.7772674560546875,
+      "springVelocity": -0.0041792867705225945,
+      "cosine": 0.10386323928833008,
+      "randomA": 1335233917,
+      "randomB": -1296746562,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 10000,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -89.72689056396484,
+      "rowY": -89.72689056396484,
+      "rowZ": -89.72689056396484,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 10000,
+      "beats": [
+        0,
+        0,
+        29145,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 20000,
+      "row": 13.46359634399414,
+      "row32": 29.472896575927734,
+      "row64": 61.457820892333984,
+      "row128": 61.45261001586914,
+      "songRow": 13.46359634399414,
+      "spring": 2.288665771484375,
+      "springVelocity": 0.0007692455546930432,
+      "cosine": 0.0381125845015049,
+      "randomA": 1335233917,
+      "randomB": -1296746562,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 20000,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -179.44857788085938,
+      "rowY": -179.44857788085938,
+      "rowZ": -179.44857788085938,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 20000,
+      "beats": [
+        0,
+        34713,
+        34713,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 40000,
+      "row": 0.9272165894508362,
+      "row32": 16.944835662841797,
+      "row64": 48.916805267333984,
+      "row128": 112.90119171142578,
+      "songRow": 0.9272165894508362,
+      "spring": 3.995504084741697e-05,
+      "springVelocity": -0.0069260667078197,
+      "cosine": -0.9146586060523987,
+      "randomA": -613048151,
+      "randomB": 1432625924,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 36418,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -326.7536315917969,
+      "rowY": -326.7536315917969,
+      "rowZ": -326.7536315917969,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 36418,
+      "beats": [
+        0,
+        0,
+        46233,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 95000,
+      "row": 14.45216178894043,
+      "row32": 30.495059967041016,
+      "row64": 30.42739486694336,
+      "row128": 94.39130401611328,
+      "songRow": 14.45216178894043,
+      "spring": 1.935436725616455,
+      "springVelocity": -0.002051145536825061,
+      "cosine": -0.8399013876914978,
+      "randomA": -1255514251,
+      "randomB": 276531180,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 90821,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -814.8665161132812,
+      "rowY": -814.8665161132812,
+      "rowZ": -814.8665161132812,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 90821,
+      "beats": [
+        0,
+        13593,
+        56409,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 100000,
+      "row": 11.318087577819824,
+      "row32": 11.362739562988281,
+      "row64": 11.289878845214844,
+      "row128": 11.25345230102539,
+      "songRow": 11.318087577819824,
+      "spring": 1.945117473602295,
+      "springVelocity": 0.004598833154886961,
+      "cosine": 1.0,
+      "randomA": 1152029783,
+      "randomB": 1526798031,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 95821,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -859.7273559570312,
+      "rowY": -859.7273559570312,
+      "rowZ": -859.7273559570312,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 95821,
+      "beats": [
+        0,
+        0,
+        37977,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 140320,
+      "row": 5.116784572601318,
+      "row32": 21.179424285888672,
+      "row64": 53.0776481628418,
+      "row128": 117.0256118774414,
+      "songRow": 5.116784572601318,
+      "spring": -1.799663782119751,
+      "springVelocity": -0.0005307506653480232,
+      "cosine": 0.6635928153991699,
+      "randomA": -1676943112,
+      "randomB": -1932200619,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 136141,
+      "scale": 11264,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -1222.82861328125,
+      "rowY": -1222.82861328125,
+      "rowZ": -1222.82861328125,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": true,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": false,
+      "autoCamera": false,
+      "elapsedMs": 136141,
+      "beats": [
+        0,
+        42201,
+        42201,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 160320,
+      "row": 8.580381393432617,
+      "row32": 8.652143478393555,
+      "row64": 40.5366325378418,
+      "row128": 40.479400634765625,
+      "songRow": 8.580381393432617,
+      "spring": 0.2554336190223694,
+      "springVelocity": 0.006018331740051508,
+      "cosine": 1.0,
+      "randomA": -1676943112,
+      "randomB": -1932200619,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 1,
+      "phase": 9510,
+      "scale": 11264,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -1403.49267578125,
+      "rowY": -1403.49267578125,
+      "rowZ": -1403.49267578125,
+      "alternateTextures": false,
+      "flag11d": true,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": false,
+      "fog": false,
+      "flag124": false,
+      "autoCamera": false,
+      "elapsedMs": 156141,
+      "beats": [
+        0,
+        0,
+        53721,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 175320,
+      "row": 15.178051948547363,
+      "row32": 15.256193161010742,
+      "row64": 47.129573822021484,
+      "row128": 47.0671272277832,
+      "songRow": 15.178051948547363,
+      "spring": 1.4674229621887207,
+      "springVelocity": -0.004091221839189529,
+      "cosine": -1.0,
+      "randomA": 692748232,
+      "randomB": 1171701325,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 4,
+      "phase": 10910095,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -1501.240966796875,
+      "rowY": -1501.240966796875,
+      "rowZ": -1501.240966796875,
+      "alternateTextures": false,
+      "flag11d": true,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": true,
+      "flag121": true,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": true,
+      "elapsedMs": 166962,
+      "beats": [
+        0,
+        14,
+        40857,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 195320,
+      "row": 10.641648292541504,
+      "row32": 10.728611946105957,
+      "row64": 42.588565826416016,
+      "row128": 106.51570892333984,
+      "songRow": 10.641648292541504,
+      "spring": 1.6277365684509277,
+      "springVelocity": 0.005384914577007294,
+      "cosine": 1.0,
+      "randomA": 1800623715,
+      "randomB": 1977912191,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2550648,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -1654.94091796875,
+      "rowY": -1654.94091796875,
+      "rowZ": -1654.94091796875,
+      "alternateTextures": false,
+      "flag11d": true,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": true,
+      "flag121": true,
+      "flag122": true,
+      "fog": true,
+      "flag124": true,
+      "autoCamera": true,
+      "elapsedMs": 183977,
+      "beats": [
+        0,
+        0,
+        52377,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 225320,
+      "row": 7.837095737457275,
+      "row32": 23.93755531311035,
+      "row64": 55.77444839477539,
+      "row128": 119.6911849975586,
+      "songRow": 7.837095737457275,
+      "spring": -0.3061123788356781,
+      "springVelocity": 0.005403999239206314,
+      "cosine": 1.0,
+      "randomA": -1733125887,
+      "randomB": 1888615446,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 3,
+      "phase": 2579454,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -1915.1513671875,
+      "rowY": -1915.1513671875,
+      "rowZ": -1915.1513671875,
+      "alternateTextures": false,
+      "flag11d": true,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": true,
+      "flag121": true,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": true,
+      "elapsedMs": 212783,
+      "beats": [
+        0,
+        0,
+        26841,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 247627,
+      "row": 0.0017910003662109375,
+      "row32": 0.11267724633216858,
+      "row64": 63.932228088378906,
+      "row128": 63.84376907348633,
+      "songRow": 0.0017910003662109375,
+      "spring": 0.8087892532348633,
+      "springVelocity": -0.005834907293319702,
+      "cosine": -0.9999997019767761,
+      "randomA": -1710431149,
+      "randomB": 741663871,
+      "layers": [
+        5,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2597287,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -2076.240478515625,
+      "rowY": -2076.240478515625,
+      "rowZ": -2076.240478515625,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": true,
+      "flag122": false,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": true,
+      "elapsedMs": 230616,
+      "beats": [
+        0,
+        0,
+        33228,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 280000,
+      "row": 2.4906258583068848,
+      "row32": 2.615865707397461,
+      "row64": 34.414268493652344,
+      "row128": 98.3102035522461,
+      "songRow": 2.4906258583068848,
+      "spring": -1.21705961227417,
+      "springVelocity": -0.006439036224037409,
+      "cosine": -0.43767035007476807,
+      "randomA": 286107948,
+      "randomB": 1320705329,
+      "layers": [
+        5,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2624438,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -2321.5009765625,
+      "rowY": -2321.5009765625,
+      "rowZ": -2321.5009765625,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": false,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 257767,
+      "beats": [
+        0,
+        0,
+        55641,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 320000,
+      "row": 9.417859077453613,
+      "row32": 9.560637474060059,
+      "row64": 9.328137397766113,
+      "row128": 73.21257781982422,
+      "songRow": 9.417859077453613,
+      "spring": 0.867713987827301,
+      "springVelocity": 0.006141063757240772,
+      "cosine": 1.0,
+      "randomA": -2038591532,
+      "randomB": 542263931,
+      "layers": [
+        5,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2662647,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -2666.650634765625,
+      "rowY": -2666.650634765625,
+      "rowZ": -2666.650634765625,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": false,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 295976,
+      "beats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 350000,
+      "row": 6.613306522369385,
+      "row32": 22.76945686340332,
+      "row64": 22.516115188598633,
+      "row128": 86.38805389404297,
+      "songRow": 6.613306522369385,
+      "spring": -1.1547608375549316,
+      "springVelocity": 0.0033272725995630026,
+      "cosine": 0.9849783778190613,
+      "randomA": -1047899966,
+      "randomB": 1758989331,
+      "layers": [
+        5,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2692647,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -2937.646728515625,
+      "rowY": -2937.646728515625,
+      "rowZ": -2937.646728515625,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": true,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": false,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 325976,
+      "beats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "state": {
+      "tick": 361745,
+      "row": 0.0032558441162109375,
+      "row32": 0.1651744544506073,
+      "row64": 63.90145492553711,
+      "row128": 63.77138137817383,
+      "songRow": 0.0032558441162109375,
+      "spring": 0.8075409531593323,
+      "springVelocity": -0.005837390199303627,
+      "cosine": -0.999998927116394,
+      "randomA": -1843150662,
+      "randomB": -1170625505,
+      "layers": [
+        1,
+        4
+      ]
+    },
+    "comic": {
+      "mode": 0,
+      "phase": 2699043,
+      "scale": 65536,
+      "drift": 0,
+      "driftVelocity": 0,
+      "beatFlags": 0,
+      "rowX": -2995.423095703125,
+      "rowY": -2995.423095703125,
+      "rowZ": -2995.423095703125,
+      "alternateTextures": false,
+      "flag11d": false,
+      "flag11e": false,
+      "flag11f": false,
+      "flag120": false,
+      "flag121": false,
+      "flag122": true,
+      "fog": false,
+      "flag124": true,
+      "autoCamera": false,
+      "elapsedMs": 332372,
+      "beats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+]

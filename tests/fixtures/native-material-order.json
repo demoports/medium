@@ -1,0 +1,116 @@
+{
+  "routine": "0x415850",
+  "registrations": [
+    {
+      "name": "overlays",
+      "material": "0x40030302"
+    },
+    {
+      "name": "tunnel patches",
+      "material": "0x41474705"
+    },
+    {
+      "name": "tunnel bars",
+      "material": "0x41575702"
+    },
+    {
+      "name": "comic",
+      "material": "0x40030704"
+    },
+    {
+      "name": "makina",
+      "material": "0x40030301"
+    }
+  ],
+  "secondPassByLowByte": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "draws": [
+    {
+      "name": "tunnel patches",
+      "material": "0x41474705",
+      "indexCount": 3,
+      "states": {
+        "depthWrite": 0,
+        "alphaTest": 1,
+        "sourceBlend": 5,
+        "destinationBlend": 6,
+        "cullMode": 1,
+        "alphaReference": 6,
+        "alphaFunction": 5,
+        "alphaBlend": 1,
+        "fogColor": 0
+      }
+    },
+    {
+      "name": "comic",
+      "material": "0x40030704",
+      "indexCount": 3,
+      "states": {
+        "depthWrite": 1,
+        "alphaTest": 1,
+        "sourceBlend": 2,
+        "destinationBlend": 1,
+        "cullMode": 3,
+        "alphaReference": 0,
+        "alphaFunction": 5,
+        "alphaBlend": 0,
+        "fogColor": 0
+      }
+    },
+    {
+      "name": "makina",
+      "material": "0x40030301",
+      "indexCount": 3,
+      "states": {
+        "depthWrite": 1,
+        "alphaTest": 1,
+        "sourceBlend": 5,
+        "destinationBlend": 6,
+        "cullMode": 3,
+        "alphaReference": 4,
+        "alphaFunction": 5,
+        "alphaBlend": 1,
+        "fogColor": 0
+      }
+    },
+    {
+      "name": "overlays",
+      "material": "0x40030302",
+      "indexCount": 3,
+      "states": {
+        "depthWrite": 0,
+        "alphaTest": 1,
+        "sourceBlend": 5,
+        "destinationBlend": 2,
+        "cullMode": 3,
+        "alphaReference": 0,
+        "alphaFunction": 5,
+        "alphaBlend": 1,
+        "fogColor": 0
+      }
+    },
+    {
+      "name": "tunnel bars",
+      "material": "0x41575702",
+      "indexCount": 3,
+      "states": {
+        "depthWrite": 0,
+        "alphaTest": 1,
+        "sourceBlend": 5,
+        "destinationBlend": 2,
+        "cullMode": 1,
+        "alphaReference": 0,
+        "alphaFunction": 5,
+        "alphaBlend": 1,
+        "fogColor": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Medium Comic startup-row probe</title>
+<style>
+body{margin:0;background:#101217;color:#eee;font:14px system-ui}canvas{display:block;width:640px;height:480px}
+form,p,pre{margin:12px}label{margin-right:12px}input{width:100px}button{margin-right:6px}pre{white-space:pre-wrap;max-width:920px}
+</style>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<canvas aria-label="Medium startup row comparison"></canvas>
+<form>
+<label>Time <input id="time" type="number" step=".001" value="175.38"></label>
+<label>Initial row Y <input id="rowY" type="number" step="1" value="0"></label>
+<label>Initial row Z <input id="rowZ" type="number" step="1" value="0"></label>
+<button>Render</button>
+<button type="button" data-profile="0">Rows 0, 0</button>
+<button type="button" data-profile="4">Rows 4, 4</button>
+</form>
+<p>Diagnostic only. The released constructor and Reset leave these two heap values unwritten. This page supplies their initial values before the first timeline tick, then replays all normal updates. Production files are unchanged.</p>
+<pre id="status">Loading…</pre>
+<script type="module">
+import { Demo } from '../src/Demo.js';
+const inputs=Object.fromEntries(['time','rowY','rowZ'].map(id=>[id,document.getElementById(id)]));
+const params=new URLSearchParams(location.search);
+for(const [id,key] of [['time','t'],['rowY','y'],['rowZ','z']])if(params.has(key))inputs[id].value=params.get(key);
+const status=document.querySelector('#status');
+try {
+ // Explicitly request advancing clocks: this page supplies the original
+ // heap floats, including large values that naturally fail to advance.
+ const demo=new Demo({comicRotationProfile:'zero'});
+ await demo.init(document.querySelector('canvas'));
+ const timeline=demo.timeline,originalReset=timeline.hooks.onReset;
+ timeline.hooks.onReset=state=>{
+  state.effects.comic.rowY=Math.fround(Number(inputs.rowY.value));
+  state.effects.comic.rowZ=Math.fround(Number(inputs.rowZ.value));
+  originalReset?.(state);
+ };
+ function render(){
+  document.body.dataset.complete='false';
+  const time=Number(inputs.time.value);
+  timeline.reset();demo.render(time);
+  const effect=demo.state.effects.comic,comic=demo.effects.comic;
+  const report={time,initialRows:{y:Number(inputs.rowY.value),z:Number(inputs.rowZ.value)},mode:effect.mode,
+   phase:effect.phase,elapsedMs:effect.elapsedMs,rowY:effect.rowY,rowZ:effect.rowZ,
+   blobAnglesDegrees:{y:effect.rowY*1024*360/65536,z:effect.rowZ*512*360/65536},
+   cameraPosition:comic.camera.position.toArray(),cameraFov:comic.camera.fov,
+   blobMatrix:comic.meshes[0].matrix.toArray(),tubeMatrix:comic.meshes[2].matrix.toArray()};
+  status.textContent=JSON.stringify(report,null,2);
+  document.body.dataset.complete='true';
+  history.replaceState(null,'',`?t=${time}&y=${inputs.rowY.value}&z=${inputs.rowZ.value}`);
+ }
+ document.querySelector('form').onsubmit=event=>{event.preventDefault();render();};
+ for(const input of Object.values(inputs))input.onchange=render;
+ for(const button of document.querySelectorAll('[data-profile]'))button.onclick=()=>{inputs.rowY.value=inputs.rowZ.value=button.dataset.profile;render();};
+ render();
+}catch(error){status.textContent=error.stack;document.body.dataset.complete='error';}
+</script>
+</html>

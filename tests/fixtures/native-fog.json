@@ -1,0 +1,290 @@
+[
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 0,
+    "retained": 255
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 8,
+    "retained": 255
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 1024,
+    "retained": 255
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 1536,
+    "retained": 255
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 2048,
+    "retained": 255
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 3072,
+    "retained": 204
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 5120,
+    "retained": 102
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 7168,
+    "retained": 0
+  },
+  {
+    "near": 2048,
+    "far": 7168,
+    "min": 255,
+    "max": 255,
+    "depth": 10240,
+    "retained": 0
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 0,
+    "retained": 207
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 8,
+    "retained": 207
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 1024,
+    "retained": 146
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 1536,
+    "retained": 115
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 2048,
+    "retained": 84
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 3072,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 5120,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 7168,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 3072,
+    "min": 184,
+    "max": 207,
+    "depth": 10240,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 0,
+    "retained": 239
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 8,
+    "retained": 239
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 1024,
+    "retained": 196
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 1536,
+    "retained": 174
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 2048,
+    "retained": 153
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 3072,
+    "retained": 109
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 5120,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 7168,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 5120,
+    "min": 216,
+    "max": 239,
+    "depth": 10240,
+    "retained": 23
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 0,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 8,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 1024,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 1536,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 2048,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 3072,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 5120,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 7168,
+    "retained": 255
+  },
+  {
+    "near": 0,
+    "far": 10240,
+    "min": 0,
+    "max": 255,
+    "depth": 10240,
+    "retained": 255
+  }
+]

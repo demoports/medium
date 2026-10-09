@@ -1,0 +1,30 @@
+[
+  {
+    "tick": 0,
+    "amplitude": 0,
+    "inner90": 0,
+    "vertices": 2560,
+    "sha256": "cbd901a56739e27057efdf3b11198cb6053a58fda0e103e920d8ab6e752331b3"
+  },
+  {
+    "tick": 1234,
+    "amplitude": 16384,
+    "inner90": 0.65,
+    "vertices": 2560,
+    "sha256": "5a1a02245958e270632a9c2aa97ea33b38ba6fb85044af2a627c379670e0c663"
+  },
+  {
+    "tick": 10000,
+    "amplitude": 32768,
+    "inner90": 0.85,
+    "vertices": 2560,
+    "sha256": "af49f212167fbf5580539f6ccf6b2454641369ea30c571a3fb1fe9df6ac2cc93"
+  },
+  {
+    "tick": 16384,
+    "amplitude": 131072,
+    "inner90": 0.85,
+    "vertices": 2560,
+    "sha256": "24e9e644305633d73862c7938fde3ba7bd690a7878f4da1551059428142c4ecc"
+  }
+]

@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-09",
+  "javascript": {
+    "command": "npm test",
+    "passed": 102,
+    "failed": 0,
+    "transportHarnessCases": 7,
+    "coverage": "Effect geometry, packed attributes, native transforms, projection/fog, cached frame transitions, texture mips, row profiles, material composition, deterministic seeking, and transport, native audio mapping, device-output latency, resume cancellation, and audio transport"
+  },
+  "native": {
+    "assets": {
+      "tool": "tools/verify-assets.py",
+      "coverage": "55 archive entries; all 53 compressed entries byte-for-byte against x86, two raw entries and original soundtrack hashes"
+    },
+    "sequencer": {
+      "tool": "tools/verify-timeline.py",
+      "coverage": "423 commands across all 361745 native millisecond ticks; global clocks and pulse envelopes also checked"
+    },
+    "random": {
+      "tool": "tools/verify-startup-rng.py",
+      "coverage": "579 random words and 288 particle triples across startup and subsequent reset; canonical zero-clock-skip/32-bit texture profile"
+    },
+    "overlayLightingFog": {
+      "tool": "tools/verify-overlays.py",
+      "coverage": "11 overlay cases, nine Tunnel lighting cases and 36 vertex-fog cases"
+    },
+    "tunnelBars": {
+      "tool": "tools/verify-tunnel-bars.py",
+      "coverage": "10240 complete vertex records across four cases: XYZ, RGBA and both UV sets"
+    },
+    "tunnelCamera": {
+      "tool": "tools/verify-tunnel-camera.py",
+      "coverage": "12 camera states and five projected points including reflected look-at basis; at most 0.032 screen-pixel error"
+    },
+    "effectVertices": {
+      "tool": "tools/verify-effect-vertices.py",
+      "coverage": "18432 Tunnel patch and 25760 Makina vertex records: geometry, diffuse and UV stages; 384 particle updates; native repeated/omitted machine split dispatch"
+    },
+    "machineTransforms": {
+      "tool": "tools/verify-machine-transforms.py",
+      "coverage": "Eight native Makina Render frames covering all six camera modes, object matrices and animation frame inputs"
+    },
+    "comicState": {
+      "tool": "tools/verify-comic-history.py",
+      "coverage": "17 snapshots from native sequence, effect commands, resets, RNG, updates and child ages"
+    },
+    "comicTransforms": {
+      "tool": "tools/verify-comic-transforms.py",
+      "coverage": "Eight native object, tube and camera matrix samples"
+    },
+    "comicLighting": {
+      "tool": "tools/verify-comic-lighting.py",
+      "coverage": "Eight native light/environment-map frames"
+    },
+    "comicGeometry": {
+      "tool": "tools/verify-comic-geometry.py",
+      "coverage": "Four complete 2145-vertex Tube meshes and 271 projected points"
+    },
+    "comicPhysics": {
+      "tool": "tools/verify-comic-physics.py",
+      "coverage": "Seven native spring-history snapshots of 25 selected vertices at canonical 60 Hz, including visibility and freeze/reset behavior; bounded numerical tolerance rather than byte identity"
+    },
+    "comicBlobShading": {
+      "tool": "tools/verify-comic-blobs.py",
+      "coverage": "210 normal, diffuse and UV samples across seven native Blob surfaces"
+    },
+    "comicPipeline": {
+      "tool": "tools/verify-comic-pipeline.py",
+      "coverage": "49 complete Tube vertex samples, all 342 cross-face Blob lighting copies, and three native quad winding/diagonal submissions"
+    },
+    "comicRowStartup": {
+      "tool": "tools/verify-comic-row-profile.py",
+      "coverage": "Six preexisting heap-bit patterns through native constructor, two Resets, ten Updates and Render; explicit Init separately demonstrated to write four; recording heap bits remain unknown"
+    },
+    "projection": {
+      "tool": "tools/verify-projection.py",
+      "coverage": "54 isolated projector vertices and five quad submissions, native finite near/far 8/10240"
+    },
+    "viewPreparation": {
+      "tool": "tools/verify-view-transform.py",
+      "coverage": "44 projected/fogged points across four translated, rotated and reflected cameras with native quarter-scale view preparation"
+    },
+    "materialOrder": {
+      "tool": "tools/verify-material-order.py",
+      "coverage": "Five representative material buckets execute the original flush routine; original depth/blend/alpha/cull state and two-pass draw order"
+    },
+    "mipmaps": {
+      "tool": "tools/verify-mips.py",
+      "coverage": "11 textures and all 98 generated RGBA mip levels match original x86 bytes, including transparent RGB"
+    },
+    "frameCache": {
+      "tool": "tools/verify-render-cache.py",
+      "coverage": "Three consecutive frames across command at 225339 ms; 150 projected Tube points, complete geometry hashes, real native allocation/clipping/index submission, and 54 split-fog cases; confirms cached lens with current geometry and live fog bounds"
+    },
+    "sequentialRenderAudit": {
+      "tool": "tools/verify-comic-render-history.py",
+      "coverage": "Sequential native Render camera/projection audit; uses supplied port Blob surfaces and does not independently validate their physics"
+    },
+    "sharedCameraCallbacks": {
+      "tool": "tools/verify-shared-camera.py",
+      "coverage": "Four native Tick -> Comic.Render -> Tunnel.Render dispatcher traces at 95/140 seconds, each followed by another Render pair without Tick; camera memory writes prove inherited current-tick camera and Comic shake retained and accumulated by Tunnel.Render"
+    },
+    "audioClock": {
+      "tool": "tools/verify-audio-clock.py",
+      "coverage": "Original DirectSound refill, generated-sample clock, Start/GetTime and mainloop tick delta; three startup baselines and two ring wraps; native MP3 initializer discards one 1152-sample frame; optional ffmpeg PCM comparison verifies exact alignment with inverted polarity",
+      "sampleRate": 44100,
+      "ringStereoFrames": 32768,
+      "decoderSkipStereoFrames": 1152,
+      "canonicalVisualLeadSeconds": 0.7169160997732427,
+      "startupCaveat": "Native mainloop subtracts wall milliseconds spent after audio-clock Start and before its first GetTime; canonical reproducible profile assumes zero."
+    }
+  },
+  "browser": {
+    "renderer": "Codex in-app browser / WebGL 2",
+    "sampleTimesSeconds": [
+      10.32,
+      20.32,
+      40.32,
+      95.32,
+      140.35,
+      160.32,
+      175.35,
+      195.32,
+      225.35,
+      250.32,
+      280.32,
+      300.32,
+      310.32,
+      325.32,
+      355.32,
+      360.32
+    ],
+    "checks": [
+      "All effect shaders compile without console errors or warnings in a fresh session",
+      "Photo overlays display",
+      "Forward and backward scrubbing",
+      "Audio playback and pause",
+      "Return to launcher and restart",
+      "Web Audio decoded source origin, native pre-roll/skip and output clock",
+      "Native endpoint at 361.745 seconds with queued audio output accounted for",
+      "Playing forward seek, paused backward seek, natural ending and restart through actual transport UI"
+    ],
+    "fullscreen": "Control exercised; fullscreen state could not be confirmed in the embedded browser",
+    "comparison": {
+      "reference": "https://www.youtube.com/watch?v=wYvn653Fefw",
+      "videoTimesSeconds": [
+        10,
+        20,
+        40,
+        95,
+        140,
+        160,
+        175,
+        195,
+        225,
+        250,
+        280,
+        300,
+        310,
+        325,
+        355,
+        360
+      ],
+      "portOffsetSeconds": 0.32,
+      "consoleErrorsOrWarnings": 0,
+      "remainingDifferences": "All four reported structural failures are corrected. The refreshed 16-frame audit still shows fine streak, spring-shape, highlight, sampling and image-sharpness differences; whole-image pixel identity is not asserted.",
+      "alignmentNote": "Approximately one third of a second: opening-derived0.32s for most pairs;0.35s for140/175/225 to align rapid camera motion and the verified lens-cache cut. Every pair reports its exact requested timestamp. Native capture timing and canonical60Hz boundaries can differ by a frame.",
+      "portTimesSeconds": [
+        10.32,
+        20.32,
+        40.32,
+        95.32,
+        140.35,
+        160.32,
+        175.35,
+        195.32,
+        225.35,
+        250.32,
+        280.32,
+        300.32,
+        310.32,
+        325.32,
+        355.32,
+        360.32
+      ],
+      "alignmentRefinements": {
+        "140": 0.35,
+        "175": 0.35,
+        "225": 0.35
+      }
+    },
+    "audio": {
+      "tool": "tools/audio-player-probe.html",
+      "checksPassed": 9,
+      "checksFailed": 0,
+      "sampleRate": 48000,
+      "decodedDurationSeconds": 361.195083333,
+      "decodeOriginBestLagSamples": 0,
+      "zeroLagCorrelationWithFFmpeg": 0.99672807,
+      "decodeNote": "512 PCM samples; best cross-correlation lag over +/-2048 samples; nonidentical amplitudes are expected from different resampling filters.",
+      "nativeLeadSeconds": 0.7169160997732427,
+      "openingSilenceSeconds": 0.7430385487528345,
+      "mp3SkipSeconds": 0.026122448979591838,
+      "baseLatencySeconds": 0.005333333333333333,
+      "outputLatencySeconds": 0.032,
+      "observedOutputClockSeconds": 1.166634,
+      "independentlyExtrapolatedOutputSeconds": 1.166734,
+      "consoleErrorsOrWarnings": 0,
+      "limits": "Uses browser-reported output timestamps. Actual speaker/headphone acoustic timing was not measured; reference-video audio was unavailable locally for waveform correlation."
+    }
+  },
+  "limits": [
+    "WebGL and Direct3D 7 rasterization, CPU/GPU clipping, interpolation, sampler behavior, precision and recording compression can differ; no whole-sequence pixel-identity claim.",
+    "Render-dependent springs and damping use a canonical 60 Hz cadence while the sequencer retains the native 1 ms tick; native runs at another refresh/render rate can differ.",
+    "Fixed startup RNG profile: zero clock-derived skip, two startup Tunnel resets, 32-bit textures without dithering. The reference startup heap/RNG state was not captured.",
+    "Comic row floats are uninitialized in the native constructor and Reset. The default recording profile preserves the frozen identity-rotation result seen in the reference; its exact original heap bits cannot be recovered. The zero-initialized comparison profile remains available.",
+    "Frame-begin lens, GPU fog enable/color and clear color are cached; live camera transforms and vertex-fog bounds are retained. Tests cover the 225339 ms cut, but do not execute a full native Direct3D rasterizer."
+  ]
+}

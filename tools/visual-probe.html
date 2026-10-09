@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Medium render cadence probe</title>
+<style>body{margin:0;background:#000;color:#fff;font:14px system-ui}canvas{display:block;width:960px;height:720px}output{display:block;padding:8px}</style>
+<script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+<canvas id="screen" width="640" height="480" aria-label="Medium cadence sample"></canvas><output id="status">Loading…</output>
+<script type="module">
+import { Demo } from '../src/Demo.js';
+const parameters=new URLSearchParams(location.search),rate=Number(parameters.get('rate')||60),time=Number(parameters.get('t')||195.32);
+const demo=new Demo(),comic=demo.effects.comic,step=comic.onRenderTick.bind(comic);
+comic.onRenderTick=state=>{
+ if(state.layers.includes('comic')&&comic.previousEffect===state.effects.comic)comic.renderAccumulator+=rate-60;
+ step(state);
+};
+await demo.init(document.querySelector('canvas'));
+if(parameters.has('far')) { const update=comic.update.bind(comic); comic.update=(...args)=>{ update(...args); comic.camera.far=Number(parameters.get('far')); comic.camera.updateProjectionMatrix(); }; }
+demo.render(time);
+document.querySelector('output').textContent=`Rendered ${time.toFixed(2)} s with ${rate} Comic spring steps per second; far plane ${comic.camera.far}.`;
+</script></html>
